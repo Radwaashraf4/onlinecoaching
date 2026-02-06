@@ -1,0 +1,167 @@
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #304861;
+  line-height: 1.6;
+  background: #FFF5F0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section.light {
+  background: #ffffff;
+}
+
+h2, h3, h4 {
+  margin-bottom: 1rem;
+}
+
+.section-text {
+  max-width: 700px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn.primary {
+  background: #304861;
+  color: #fff;
+}
+
+.btn.small {
+  padding: 0.5rem 1.2rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== Header ===== */
+.header {
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.nav a {
+  margin-left: 1.5rem;
+  color: #304861;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #FFF5F0, #E4E7EC);
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+/* ===== Services ===== */
+.services-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #FFF5F0;
+  padding: 2rem;
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Testimonials ===== */
+.testimonials blockquote {
+  background: #E4E7EC;
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+}
+
+.testimonials span {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+/* ===== Contact ===== */
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #CBD0D7;
+  font-family: inherit;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #304861;
+  color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero h2 {
+    font-size: 3rem;
+  }
+}
