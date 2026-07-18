@@ -17,7 +17,9 @@ A modern and responsive online coaching website built using **HTML**, **CSS**, a
 - Interactive JavaScript features
 
 ## Project preview
-<
+![onlinecoaching Preview](onlinecoaching_preview1.png)
+
+![onlinecoaching Preview](onlinecoaching_preview2.png)
 ## 🛠️ Technologies Used
 
 - HTML5
