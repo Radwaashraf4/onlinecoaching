@@ -6,18 +6,32 @@
   <title>Life Coach | Transform Your Life</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- ===== Header / Navigation ===== -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container nav">
-      <h1 class="logo">LifeCoach</h1>
-      <nav>
+      <h1 class="logo">
+        <i class="fas fa-seedling"></i>
+        LifeCoach
+      </h1>
+      
+      <!-- Hamburger Menu Button -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#testimonials">Testimonials</a>
@@ -27,45 +41,128 @@
   </header>
 
   <!-- ===== Hero Section ===== -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="container hero-content">
-      <h2>Design the Life You Truly Want</h2>
-      <p>Personal coaching to help you gain clarity, confidence, and direction.</p>
-      <a href="#contact" class="btn primary">Start Your Journey</a>
+      <div class="hero-text">
+        <span class="badge">✨ Transform Your Life</span>
+        <h2>Design the Life You <span class="highlight">Truly Want</span></h2>
+        <p>Personal coaching to help you gain clarity, confidence, and direction.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn primary">Start Your Journey <i class="fas fa-arrow-right"></i></a>
+          <a href="#about" class="btn secondary">Learn More <i class="fas fa-play-circle"></i></a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number" data-count="500">0</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="98">0</span>
+            <span class="stat-label">Success Rate %</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="2000">0</span>
+            <span class="stat-label">Sessions</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="floating-card card-1">
+          <i class="fas fa-rocket"></i>
+          <span>Goal Setting</span>
+        </div>
+        <div class="floating-card card-2">
+          <i class="fas fa-brain"></i>
+          <span>Mindset</span>
+        </div>
+        <div class="floating-card card-3">
+          <i class="fas fa-heart"></i>
+          <span>Wellness</span>
+        </div>
+        <div class="hero-illustration">
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </div>
+    </div>
+    <div class="wave-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.35c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#ffffff" opacity="1"></path>
+      </svg>
     </div>
   </section>
 
   <!-- ===== About Section ===== -->
   <section id="about" class="section">
     <div class="container">
-      <h3>About Me</h3>
-      <p class="section-text">
-        I help individuals break mental barriers, build confidence, and create
-        sustainable habits that lead to real transformation. My coaching is
-        practical, personalized, and deeply human.
-      </p>
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="image-placeholder">
+            <i class="fas fa-user-tie"></i>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-tag">About Me</span>
+          <h3>Your Partner in <span class="highlight">Personal Growth</span></h3>
+          <p class="section-text">
+            I help individuals break mental barriers, build confidence, and create
+            sustainable habits that lead to real transformation. My coaching is
+            practical, personalized, and deeply human.
+          </p>
+          <div class="about-features">
+            <div class="feature">
+              <i class="fas fa-check-circle"></i>
+              <span>10+ Years Experience</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Certified Coach</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Personalized Approach</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn primary">Work With Me</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ===== Services Section ===== -->
   <section id="services" class="section light">
     <div class="container">
-      <h3>My Services</h3>
+      <div class="section-header">
+        <span class="section-tag">What I Offer</span>
+        <h3>My Services</h3>
+        <p>Comprehensive coaching programs designed to help you achieve your full potential.</p>
+      </div>
 
       <div class="services-grid">
-        <div class="card">
+        <div class="card" data-aos="fade-up">
+          <div class="card-icon">
+            <i class="fas fa-users"></i>
+          </div>
           <h4>1-on-1 Coaching</h4>
-          <p>Personalized sessions focused on your goals and challenges.</p>
+          <p>Personalized sessions focused on your unique goals, challenges, and aspirations.</p>
+          <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
           <h4>Mindset Reset</h4>
-          <p>Identify limiting beliefs and replace them with empowering ones.</p>
+          <p>Identify limiting beliefs and replace them with empowering ones that serve you.</p>
+          <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon">
+            <i class="fas fa-route"></i>
+          </div>
           <h4>Life Strategy</h4>
-          <p>Clear plans and habits to move your life forward with confidence.</p>
+          <p>Clear plans and actionable habits to move your life forward with confidence.</p>
+          <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -74,18 +171,76 @@
   <!-- ===== Testimonials ===== -->
   <section id="testimonials" class="section">
     <div class="container">
-      <h3>What Clients Say</h3>
+      <div class="section-header">
+        <span class="section-tag">Testimonials</span>
+        <h3>What Clients Say</h3>
+        <p>Real stories from real people who transformed their lives.</p>
+      </div>
 
-      <div class="testimonials">
-        <blockquote>
-          “This coaching completely changed how I see myself and my future.”
-          <span>— Sarah M.</span>
-        </blockquote>
+      <div class="testimonials-slider">
+        <div class="testimonials-wrapper" id="testimonialWrapper">
+          <div class="testimonial-card active">
+            <div class="testimonial-content">
+              <i class="fas fa-quote-left"></i>
+              <p>“This coaching completely changed how I see myself and my future. I finally have clarity and direction.”</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="author-info">
+                  <span class="author-name">Sarah M.</span>
+                  <span class="author-role">Marketing Director</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <blockquote>
-          “Clear, supportive, and deeply motivating. Highly recommended.”
-          <span>— James K.</span>
-        </blockquote>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <i class="fas fa-quote-left"></i>
+              <p>“Clear, supportive, and deeply motivating. Highly recommended for anyone seeking real change.”</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="author-info">
+                  <span class="author-name">James K.</span>
+                  <span class="author-role">Entrepreneur</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <i class="fas fa-quote-left"></i>
+              <p>“I've tried many coaches, but this was different. Practical advice that actually works.”</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="author-info">
+                  <span class="author-name">Emma R.</span>
+                  <span class="author-role">Teacher</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevBtn" aria-label="Previous testimonial">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="slider-dots" id="sliderDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
+          <button class="slider-btn" id="nextBtn" aria-label="Next testimonial">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -93,23 +248,111 @@
   <!-- ===== Contact Section ===== -->
   <section id="contact" class="section light">
     <div class="container">
-      <h3>Contact Me</h3>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-tag">Get in Touch</span>
+          <h3>Let's Start Your <span class="highlight">Transformation</span></h3>
+          <p>Ready to take the first step? Reach out and let's begin this journey together.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>coach@lifecoach.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+1 (555) 123-4567</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Remote & Online Sessions</span>
+            </div>
+          </div>
 
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn primary">Send Message</button>
-      </form>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+            <span class="error-message" id="nameError">Please enter your name</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@example.com" required />
+            <span class="error-message" id="emailError">Please enter a valid email</span>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="How can I help you?" />
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea rows="4" id="message" placeholder="Tell me about your goals..." required></textarea>
+            <span class="error-message" id="messageError">Please enter your message</span>
+          </div>
+          
+          <button type="submit" class="btn primary" id="submitBtn">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
     </div>
   </section>
 
   <!-- ===== Footer ===== -->
   <footer class="footer">
-    <p>© 2026 LifeCoach. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h1 class="logo">
+            <i class="fas fa-seedling"></i>
+            LifeCoach
+          </h1>
+          <p>Empowering you to live your best life through personalized coaching and support.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe for tips and insights.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 LifeCoach. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Scroll to top button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- External JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
